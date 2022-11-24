@@ -12,14 +12,7 @@ eslint no-unused-vars: [
 const data = require('./data');
 
 function getSpeciesByIds(...ids) {
-  const callBack = (code) => {
-    for (let index = 0; index < data.species.length; index += 1) {
-      if (code === data.species[index].id) {
-        return data.species[index];
-      }
-    }
-  };
-  return ids.map(callBack);
+  return ids.map((id) => data.species.filter((s) => s.id === id)[0]);
 }
 
 function getAnimalsOlderThan(animal, age) {
@@ -111,14 +104,14 @@ const testSex = (test, objectLocal) => {
 };
 
 const testSort = (objectTest, objectName) => {
-  const loc = Object.keys(objectName);
   if (objectTest.sorted) {
-    for (let index = 0; index < loc.length; index += 1) {
-      objectName[loc[index]].forEach((aux) => {
-        const key = Object.keys(aux);
-        aux[key].sort();
+    const loc = Object.keys(objectName);
+    loc.forEach((local) => {
+      objectName[local].forEach((specyName) => {
+        const name = Object.keys(specyName);
+        specyName[name].sort();
       });
-    }
+    });
   }
   return objectName;
 };
