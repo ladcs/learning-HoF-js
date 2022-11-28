@@ -1,10 +1,9 @@
-# :construction: Aprendendo HoF ! :construction:
+# :construction: Learning HoF / Aprendendo HoF ! :construction:
 
 This project I learning use higher-order Functions of JavaScript! In `data.js` has an object with the keys:
 
-species => array with keys:
-<details><summary> species </summary>
-Is array with objects, the keys of this elements are:
+<details><summary> species </summary> <br />
+species => array of objects with keys:
 
 - id: species id;
 - name: name of species;
@@ -12,33 +11,74 @@ Is array with objects, the keys of this elements are:
 - location: where stay this species;
 - residents => this is an array of objects with the keys:
 
-- name
-- sex
-- age
+- name;
+- sex;
+- age.
 
 </details>
 
-<details><summary> employess </summary>
-Is array with objects, the keys of this elements are:
+<details><summary> employees </summary> <br />
+employees => array of objects with keys:
 
-- id: employer id;
-- firstName: name of employer;
-- lastName: last name of employer;
-- managers: array of id, the elements are employess id;
-- responsibleFor: species Id
-
-</details>
-
-<details> <summary> hours </summary>
-Is an object, the keys is name of days week. In this keys has an object with two keys, open and close with a number.
+- id: employeer id;
+- firstName: name of employeer;
+- lastName: last name of employeer;
+- managers: array of id, the elements are employees id;
+- responsibleFor: species Id;
 
 </details>
 
-<details><summary> prices </summary> 
-Is an object with the keys, adult, senior and child, all keys has a decimal number.
+<details> <summary> hours </summary> <br />
+hours => object, the keys is name of days week. In this keys has an object with two keys, open and close with a number.
+
 </details>
 
-<details><summary><strong> Function getSpeciesByIds </summary> </strong>
+<details><summary> prices </summary> <br />
+prices => object with the keys, adult, senior and child, all keys has a decimal number.
+</details>
+
+<details><summary><strong> Português </summary></strong> <br />
+
+Esse projeto eu consolidei meus conhecimentos com higher-order functions de JavaScript! Em `data.js` há um objeto com as chaves:
+
+<details><summary> species </summary> <br />
+species => um array de objects com as keys:
+
+- id: id das especies;
+- name: nome das especies;
+- popularity: número de especies;
+- location: onde ficam as especies;
+- residents => um array de objetos com as chaves:
+
+- name;
+- sex;
+- age.
+
+</details>
+
+<details><summary> employees </summary> <br />
+employees => um array de objects com as keys:
+
+- id: id dos empregados;
+- firstName: nome do empregado;
+- lastName: sobrenome do empregado;
+- managers: array com id, os elementos são employees id;
+- responsibleFor: species Id;
+
+</details>
+
+<details> <summary> hours </summary> <br />
+ hours => object, as chaves são os dias da semana em inglês. Nessas chaves há um objeto com as chaves, open e close, que são números representando horas no formato de 24h.
+
+</details>
+
+<details><summary> prices </summary> <br />
+prices => object com as chaves, adult, senior and child, todas as chaves possuem um decimal.
+</details>
+
+</details>
+
+<details><summary><strong> Function getSpeciesByIds </summary> </strong> <br />
 
 This function get all species by ids. Recive an array of ids, then return an empth array if no id, an array with the species of id and return an array with all species of all ids.
 
@@ -46,157 +86,96 @@ This function get all species by ids. Recive an array of ids, then return an emp
 
 <details><summary><strong> Function getAnimalsOlderThan </strong></summary>
 
-
+Receve one species and one age, if all animals on the name of species have age more than this age return true, case at less one animal with age lower then the age return false.
 
 </details>
-### 2. IMPLEMENTE A FUNÇÃO getAnimalsOlderThan
 
-  Esta função, a partir do nome de uma espécie e uma idade mínima, verifica se todos os animais daquela espécie possuem a idade mínima especificada
+<details><summary><strong> Function getEmployeeByName </summary></strong>
 
-  **Observações técnicas**
+This functions get a employeer by name. Receve a string with a name, this name can be the first name and the last name.
 
-  - Deve retornar um valor booleano
+</details>
 
-  **O que será avaliado**
+<details><summary><strong> function createEmployee </strong></summary>
 
-  - Ao passar o nome de uma espécie e uma idade, testa se todos os animais desta
- espécie possuem a idade mínima especificada
+Receve an object with `id`, `firstName` and `lastName`, this param is `personalInfo`, receve another object with keys `managers` and `responsibleFor`, both are array and this param is `associatedWith`, then with this params create a new employee.
 
-### 3. IMPLEMENTE A FUNÇÃO getEmployeeByName
+</details>
 
-   Esta função é responsável pela busca das pessoas colaboradoras através do primeiro ou do último nome delas
+<details><summary><strong> function isManager </summary> </strong>
 
-  **O que será avaliado**
+This function return true or false, case receve `id` is manager return true, in other case return false.
 
-  - Sem parâmetros, retorna um objeto vazio
-  - Quando provido o primeiro nome do funcionário, retorna o objeto do funcionário
-  - Quando provido o último nome do funcionário, retorna o objeto do funcionário
+</details>
 
-### 4. IMPLEMENTE A FUNÇÃO createEmployee
+<details><summary><strong> function addEmployee </summary></strong>
 
-  A função, a partir de informações recebidas nos parâmetros, é capaz de criar um objeto equivalente ao de uma pessoa colaboradora, retornando-o
+This function can create a new employee like `createEmployee`, but receve `id`, `firstName`, `lastName`, `managers` and `responsibleFor`.
 
-  **Observações técnicas**
+</details>
 
-  - O parâmetro `personalInfo` recebe um objeto que contém o `id`, o `firstName` e o `lastName`
-  - O parâmetro `associatedWith` recebe um objeto que contém dois array: `managers` e `responsibleFor`
+<details><summary><strong> function countAnimals </summary></strong>
 
-  **O que será avaliado**
+Can receve a species, if not have species return the number of all species.
 
-  - Cria um novo colaborador a partir de objetos contendo `informações pessoais` e `gerentes e animais gerenciados`.
+If have one species return the number of this species.
 
-### 5. IMPLEMENTE A FUNÇÃO isManager
+</details>
 
-  Verifica se uma pessoa colaboradora, a partir de seu id, ocupa cargo de gerência.
+<details><summary><strong> function calculateEntry </summary></strong>
 
-  **Observações técnicas**
+Receve an object with keys `Adult`, `Child` and `Senior` this keys have a number, then will multiplication for prices, a key of object in `data.js`, then return the sum.
 
-  - Deve retornar um valor booleano
+</details>
 
-  **O que será avaliado**
+<details><summary><strong> function getAnimalMap </summary></strong>
 
-  - Testa se o id passado é de um gerente
+Can receve an object with keys:
 
-### 6. IMPLEMENTE A FUNÇÃO addEmployee
+- includeNames;
+- sorted;
+- sex.
 
-  A função irá adicionar uma nova pessoa colaboradora ao array `employees`, presente no arquivo `data.js`.
+If includeNames is true return all animals and your names.
 
-  **O que será avaliado**
+If sorted is true return all animals sorted.
 
-  - Adiciona um funcionário no fim da lista
+If sex is male return all male animals, and if is female return all female animals.
 
-### 7. IMPLEMENTE A FUNÇÃO countAnimals
+</details>
 
-  Esta função é responsável por contabilizar a quantidade de animais.
+<details><summary><strong> function getSchedule </summary></strong>
 
-  **Observações técnicas**
+Can receve a param this is a string with a day name.
 
-  - Sem parâmetros, retorna um objeto
-  - Com o nome de uma espécie de animal, retorna um número
+If not receve a param return `"Open from ${open} am until ${close}pm"` for all day.
 
-  **O que será avaliado**
+If receve a day return `"Open from ${open} am until ${close}pm"`.
 
-  - Sem parâmetros, retorna animais e suas quantidades
-  - Com o nome de uma espécie de animal, retorna somente a quantidade
+If the day is monday return `"CLOSED"`.
 
-### 8. IMPLEMENTE A FUNÇÃO calculateEntry
+</details>
 
-  A partir da quantidade de visitantes e a faixa etária de cada um, esta função é responsável por retornar o preço total a ser cobrado
+<details><summary><strong>  function getOldestFromSpecies </summary></strong>
 
-  **Observações técnicas**
+Receve an id of employee and return an array with name, sex and age of the oldest animal. This animal is the first animal of the first specie in array, responsibleFor of employee.
 
-  - O parâmetro `entrants` recebe um objeto que contém as chaves `Adult`, `Child` e `Senior`, com suas respectivas quantidades de pessoas
+</details>
 
-  **O que será avaliado**
+<details><summary><strong> function increasePrices </summary></strong>
 
-  - Retorna 0 se nenhum argumento for passado
-  - Retorna 0 se um objeto vazio for passado
-  - Retorna o preço total a ser cobrado dado o número de adultos, crianças e idosos
+Receve a number, then change prices in `data.js`.
 
-### 9. IMPLEMENTE A FUNÇÃO getAnimalMap
+This change increase the price in number in percentage.
 
-  A função é responsável pelo mapeamento geográfico das espécies e seus animais, podendo ainda filtrá-los por ordem alfabética e gênero, por exemplo
+</details>
 
-  **Observações técnicas**
+<details><summary><strong> function getEmployeeCoverage </summary></strong>
 
-  - Analise o teste unitário para entender os retornos que são esperados para esta função
+Can receve `id`, `firstName` or `lastName`.
 
-  **O que será avaliado**
+If don't receve a param return an object with all employees, the keys are the name (first name and last name), and all animals name.
 
-  - Sem parâmetros, retorna animais categorizados por localização
-  - Com a opção `includeNames: true` especificada, retorna nomes de animais
-  - Com a opção `sorted: true` especificada, retorna nomes de animais ordenados
-  - Com a opção `sex: 'female'` ou `sex: 'male'` especificada, retorna somente nomes de animais macho/fêmea
-  - Com a opção `sex: 'female'` ou `sex: 'male'` especificada e a opção `sort: true` especificada, retorna somente nomes de animais macho/fêmea com os nomes dos animais ordenados
-  - Só retorna informações ordenadas e com sexo se a opção `includeNames: true` for especificada
+If receve a param return an object  with one key, the name of employee (first name and last name), this employee of param. this key have name of all animal of this employee.
 
-### 10. IMPLEMENTE A FUNÇÃO getSchedule
-
-  A função é responsável por disponibilizar as informações de horário para uma consulta, que pode querer ter acesso a todo o cronograma da semana ou apenas o cronograma de um dia específico
-
-  **Observações técnicas**
-
-  - Analise o teste unitário para entender os retornos que são esperados para esta função
-
-  **O que será avaliado**
-
-  - Sem parâmetros, retorna um cronograma legível para humanos
-  - Se um único dia for passado, retorna somente este dia em um formato legível para humanos
-
-### 11. IMPLEMENTE A FUNÇÃO getOldestFromFirstSpecies
-
-  A função busca por informações do animal mais velho da primeira espécie gerenciada pela pessoa colaboradora do parâmetro
-
-  **O que será avaliado**
-
-  - Passado o id de um funcionário, encontra a primeira espécie de animal
-  gerenciado pelo funcionário, e retorna um array com nome, sexo e idade do
-  animal mais velho dessa espécie
-
-### 12. IMPLEMENTE A FUNÇÃO increasePrices
-
-  A função é responsável por aumentar o preço das visitas, com base no valor de aumento recebido no parâmetro, em porcentagem
-
-  **Observações técnicas**
-
-  - Se o parâmetro da função recebe o valor 20, o aumento é de 20%
-  - Altera o objeto `prices` do arquivo `data.js`
-
-  **O que será avaliado**
-
-  - Ao passar uma porcentagem, incrementa todos os preços, arrendondados em duas casas decimais
-
-### 13. IMPLEMENTE A FUNÇÃO getEmployeeCoverage
-
-  A função é responsável por consultar as espécies pela qual a pessoa colaborada, recebida no parâmetro através de seu `id`, `firstName` ou `lastName`, é responsável
-
-  **Observações técnicas**
-
-  - Analise o teste unitário para entender os retornos que são esperados para esta função
-
-  **O que será avaliado**
-
-  - Sem parâmetros, retorna uma lista de funcionários e os animais pelos quais eles são responsáveis
-  - Com o id de um funcionário, retorna os animais pelos quais o funcionário é responsável
-  - Com o primeiro nome de um funcionário, retorna os animais pelos quais o funcionário é responsável
-  - Com o último nome de um funcionário, retorna os animais pelos quais o funcionário é responsável
+</details>
