@@ -146,7 +146,7 @@ If sex is male return all male animals, and if is female return all female anima
 
 </details>
 
-<strong> Function getSchedule </summary></strong> <br />
+<details><strong> Function getSchedule </summary></strong> <br />
 
 Can receve a param this is a string with a day name.
 
@@ -247,7 +247,7 @@ Se sex for male retorna todos os animais macho, e se for female retorna todos an
 
 </details>
 
-<strong> Função getSchedule </summary></strong><br />
+<details><strong> Função getSchedule </summary></strong><br />
 
 Pode receber um parâmetro sendo um string com os dias da semana em inglês.
 
