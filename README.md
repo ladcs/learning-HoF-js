@@ -78,6 +78,8 @@ prices => object com as chaves, adult, senior and child, todas as chaves possuem
 
 </details>
 
+<details><summary><strong>functions</summary></strong> <br />
+
 <details><summary><strong> Function getSpeciesByIds </summary> </strong> <br />
 
 This function get all species by ids. Recive an array of ids, then return an empth array if no id, an array with the species of id and return an array with all species of all ids.
@@ -141,10 +143,7 @@ If includeNames is true return all animals and your names.
 If sorted is true return all animals sorted.
 
 If sex is male return all male animals, and if is female return all female animals.
-
-</details>
-
-<details><summary><strong> function getSchedule </summary></strong>
+github.com:ladcs/learning-HoF-js.git><strong> function getSchedule </summary></strong>
 
 Can receve a param this is a string with a day name.
 
@@ -177,5 +176,7 @@ Can receve `id`, `firstName` or `lastName`.
 If don't receve a param return an object with all employees, the keys are the name (first name and last name), and all animals name.
 
 If receve a param return an object  with one key, the name of employee (first name and last name), this employee of param. this key have name of all animal of this employee.
+
+</details>
 
 </details>
